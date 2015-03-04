@@ -16,6 +16,7 @@
 		E49FE6801AA7259F00DC47F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E49FE67E1AA7259F00DC47F0 /* LaunchScreen.xib */; };
 		E49FE6931AA725D100DC47F0 /* SGiT_PoppingAnimationViewHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49FE6461AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper.framework */; };
 		E49FE6941AA725D100DC47F0 /* SGiT_PoppingAnimationViewHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E49FE6461AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E49FE6A21AA7C5F900DC47F0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49FE6A11AA7C5F900DC47F0 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		E49FE67A1AA7259F00DC47F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E49FE67C1AA7259F00DC47F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E49FE67F1AA7259F00DC47F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E49FE6A01AA7986200DC47F0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E49FE6A11AA7C5F900DC47F0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49FE6A21AA7C5F900DC47F0 /* QuartzCore.framework in Frameworks */,
 				E49FE6931AA725D100DC47F0 /* SGiT_PoppingAnimationViewHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +82,8 @@
 		E49FE63C1AA724DD00DC47F0 = {
 			isa = PBXGroup;
 			children = (
+				E49FE6A11AA7C5F900DC47F0 /* QuartzCore.framework */,
+				E49FE6A01AA7986200DC47F0 /* README.md */,
 				E49FE6481AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper */,
 				E49FE6721AA7259F00DC47F0 /* PoppingDemo */,
 				E49FE6471AA724DD00DC47F0 /* Products */,

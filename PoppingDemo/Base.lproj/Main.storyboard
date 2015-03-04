@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,8 +19,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2n-oH-e7Z">
-                                <rect key="frame" x="46" y="110" width="508" height="400"/>
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="bJI-fi-7xm"/>
+                                    <constraint firstAttribute="width" secondItem="N2n-oH-e7Z" secondAttribute="height" multiplier="1:1" id="qW2-Zd-Jaz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <state key="normal" title="Tap me!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -31,17 +36,42 @@
                                     <action selector="pressView:" destination="vyf-AY-W13" eventType="touchDown" id="aFu-VV-yZK"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testing PoppingAnimatedViewHelper utility" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5t-7Z-LYj">
+                                <rect key="frame" x="16" y="20" width="568" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OKs-3S-OFd">
+                                <rect key="frame" x="187" y="552" width="227" height="29"/>
+                                <segments>
+                                    <segment title="Normal"/>
+                                    <segment title="Slow"/>
+                                    <segment title="Ultra slow"/>
+                                </segments>
+                                <connections>
+                                    <action selector="speedChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="OCK-mS-yog"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N2n-oH-e7Z" secondAttribute="bottom" constant="90" id="F1G-FV-I1V"/>
-                            <constraint firstItem="N2n-oH-e7Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="Lbd-p5-z82"/>
-                            <constraint firstItem="N2n-oH-e7Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="90" id="gSn-tK-eTW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="N2n-oH-e7Z" secondAttribute="trailing" constant="30" id="gcU-vR-EgH"/>
+                            <constraint firstItem="OKs-3S-OFd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="N2n-oH-e7Z" secondAttribute="bottom" constant="8" symbolic="YES" id="3e4-Ka-yT6"/>
+                            <constraint firstItem="N2n-oH-e7Z" firstAttribute="top" relation="greaterThanOrEqual" secondItem="R5t-7Z-LYj" secondAttribute="bottom" constant="8" symbolic="YES" id="5Aa-Qj-DU2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OKs-3S-OFd" secondAttribute="bottom" constant="20" id="5sL-54-8RA"/>
+                            <constraint firstAttribute="centerX" secondItem="N2n-oH-e7Z" secondAttribute="centerX" id="E3d-Xy-3Wa"/>
+                            <constraint firstAttribute="centerX" secondItem="OKs-3S-OFd" secondAttribute="centerX" id="IFx-6e-tci"/>
+                            <constraint firstItem="N2n-oH-e7Z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="Lbd-p5-z82"/>
+                            <constraint firstItem="R5t-7Z-LYj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TOP-qk-VpS"/>
+                            <constraint firstItem="R5t-7Z-LYj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="aeN-3m-u0u"/>
+                            <constraint firstAttribute="centerY" secondItem="N2n-oH-e7Z" secondAttribute="centerY" id="v7J-ZZ-k5f"/>
+                            <constraint firstItem="R5t-7Z-LYj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zB2-bu-cLG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="animatedBtn" destination="N2n-oH-e7Z" id="D1F-nM-1UY"/>
+                        <outlet property="animationHelper" destination="vyf-AY-W13" id="xzL-55-qpC"/>
+                        <outlet property="speedBtn" destination="OKs-3S-OFd" id="eyb-Gc-fNd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -8,28 +8,49 @@
 
 import UIKit
 
-class PoppingAnimatedViewHelper: NSObject
+
+/** Helper to animate a view with a pop effect.
+
+    The view will be reduced by reduceFactor percent to simulate the 
+    pressed effect. Then it will enlarged by growFactor to simulate the
+    raise state.
+
+    View shadow is also animated to give more substance to the object.
+
+ */
+public class PoppingAnimatedViewHelper: NSObject
 {
-    enum Durations: Double
-    {
-        case press = 0.15
-        case depress = 0.4
-    }
+    // MARK: Animation properties
+    
+    /** Duration for the animation of the normal to pressed state. */
+    public var pressDuration = 0.15
+    
+    /** Duration for the animation between pressed to normal state. */
+    public var depressDuration = 10.0
+    
+    /** Reduction percent for display "pressed" state.
+    
+        Expect to be between 0.0 and 1.0.
+     */
+    public var reduceFactor = CGFloat(0.9)
+    
+    /** Zoom percent for display "raised" state.
+    
+        Expect to be between 0.0 and 1.0.
+    */
+    public var growFactor = CGFloat(1.10)
     
     let maxRadius = CGFloat(8.0)
     let minRadius = CGFloat(0.0)
     
-    let reduceFactor = CGFloat(0.9)
-    let growFactor = CGFloat(1.10)
-    
-    
+    // MARK: Animation public control
     
     @IBAction func pressView(sender: UIView)
     {
         let pressedTransform = CGAffineTransformMakeScale(reduceFactor, reduceFactor)
         
         UIView.animateWithDuration(
-            Durations.press.rawValue,
+            pressDuration,
             
             delay: 0.0,
             
@@ -59,39 +80,8 @@ class PoppingAnimatedViewHelper: NSObject
         // t the reference altitude
         var finalTransform      = CGAffineTransformIdentity
         
-        // Animations for the view shadow 
-        // Shadow is made bigger when view is higher
-        
-        let animateShadowUp = CABasicAnimation(keyPath: "shadowRadius")
-        
-        animateShadowUp.fromValue = minRadius
-        animateShadowUp.toValue   = maxRadius
-        animateShadowUp.duration  = Durations.depress.rawValue
-
-        let animateShadowDown = CABasicAnimation(keyPath: "shadowRadius")
-        
-        animateShadowDown.fromValue = animateShadowUp.toValue
-        animateShadowDown.toValue   = animateShadowUp.fromValue
-        animateShadowDown.duration  = Durations.depress.rawValue
-        
-        // Animation for view shadow opacity
-        // Shadow is more transparent as view is higher
-        
-        let animateShadowUpOpacity = CABasicAnimation(keyPath: "shadowOpacity")
-        
-        animateShadowUpOpacity.fromValue = sender.layer.shadowOpacity
-        animateShadowUpOpacity.toValue   = 0.8
-        animateShadowUpOpacity.duration  = Durations.depress.rawValue
-        
-        let animateShadowDownOpacity = CABasicAnimation(keyPath: "shadowOpacity")
-        
-        animateShadowDownOpacity.fromValue = animateShadowUpOpacity.toValue
-        animateShadowDownOpacity.toValue   = animateShadowUpOpacity.fromValue
-        animateShadowDownOpacity.duration  = Durations.depress.rawValue
-        
-
         UIView.animateKeyframesWithDuration(
-            Durations.depress.rawValue,
+            depressDuration,
             delay: 0.0,
             options: UIViewKeyframeAnimationOptions.CalculationModeCubic,
             
@@ -105,8 +95,6 @@ class PoppingAnimatedViewHelper: NSObject
                     relativeDuration: stepDuration,
                     animations: {
                         sender.transform = finalTransform
-                        //sender.layer.addAnimation(animateShadowDown, forKey: "shadowLower")
-                        //sender.layer.addAnimation(animateShadowDownOpacity, forKey: "shadowLowerOpacity")
                     }
                 )
                 tstamp += stepDuration
@@ -117,11 +105,6 @@ class PoppingAnimatedViewHelper: NSObject
                     relativeDuration: stepDuration,
                     animations: {
                         sender.transform = raisedTransform
-                        sender.layer.shadowRadius  = 10.0
-                        sender.layer.shadowOffset  = CGSizeMake(0.0, 10.0)
-
-                        //sender.layer.addAnimation(animateShadowUp, forKey: "shadowGrowing")
-                        //sender.layer.addAnimation(animateShadowUpOpacity, forKey: "shadowGrowingOpacity")
                     }
                 )
                 tstamp += stepDuration
@@ -132,10 +115,6 @@ class PoppingAnimatedViewHelper: NSObject
                     relativeDuration: stepDuration,
                     animations: {
                         sender.transform = finalTransform
-                        sender.layer.shadowRadius  = 0.0
-                        sender.layer.shadowOffset  = CGSizeMake(0.0, 0.0)
-                        //sender.layer.addAnimation(animateShadowDown, forKey: "shadowLower")
-                        //sender.layer.addAnimation(animateShadowDownOpacity, forKey: "shadowLowerOpacity")
                     }
                 )
                 tstamp += stepDuration
@@ -146,8 +125,6 @@ class PoppingAnimatedViewHelper: NSObject
                     relativeDuration: stepDuration,
                     animations: {
                         sender.transform = pushedTransform
-                        //sender.layer.addAnimation(animateShadowDown, forKey: "shadowLower")
-                        //sender.layer.addAnimation(animateShadowDownOpacity, forKey: "shadowLowerOpacity")
                     }
                 )
                 tstamp += stepDuration
@@ -158,8 +135,6 @@ class PoppingAnimatedViewHelper: NSObject
                     relativeDuration: stepDuration,
                     animations: {
                         sender.transform = finalTransform
-                        //sender.layer.addAnimation(animateShadowDown, forKey: "shadowLower")
-                        //sender.layer.addAnimation(animateShadowDownOpacity, forKey: "shadowLowerOpacity")
                     }
                 )
                 tstamp += stepDuration
@@ -170,10 +145,6 @@ class PoppingAnimatedViewHelper: NSObject
                     relativeDuration: stepDuration,
                     animations: {
                         sender.transform = halfRaisedTransform
-                        sender.layer.shadowRadius  = 5.0
-                        sender.layer.shadowOffset  = CGSizeMake(0.0, 5.0)
-                        //sender.layer.addAnimation(animateShadowUp, forKey: "shadowGrowing")
-                        //sender.layer.addAnimation(animateShadowUpOpacity, forKey: "shadowGrowingOpacity")
                     }
                 )
                 tstamp += stepDuration
@@ -184,10 +155,6 @@ class PoppingAnimatedViewHelper: NSObject
                     relativeDuration: stepDuration,
                     animations: {
                         sender.transform = finalTransform
-                        sender.layer.shadowRadius  = 0.0
-                        sender.layer.shadowOffset  = CGSizeMake(0.0, 0.0)
-                        //sender.layer.addAnimation(animateShadowDown, forKey: "shadowLower")
-                        //sender.layer.addAnimation(animateShadowDownOpacity, forKey: "shadowLowerOpacity")
                     }
                 )
                 tstamp += stepDuration
