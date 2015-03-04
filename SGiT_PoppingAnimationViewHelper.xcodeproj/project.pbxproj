@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		E49FE64C1AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E49FE64B1AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E49FE6521AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49FE6461AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper.framework */; };
-		E49FE6591AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FE6581AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelperTests.swift */; };
+		E49FE66C1AA7252100DC47F0 /* PoppingAnimatedViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FE66B1AA7252100DC47F0 /* PoppingAnimatedViewHelper.swift */; };
+		E49FE6761AA7259F00DC47F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FE6751AA7259F00DC47F0 /* AppDelegate.swift */; };
+		E49FE6781AA7259F00DC47F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FE6771AA7259F00DC47F0 /* ViewController.swift */; };
+		E49FE67B1AA7259F00DC47F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49FE6791AA7259F00DC47F0 /* Main.storyboard */; };
+		E49FE67D1AA7259F00DC47F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E49FE67C1AA7259F00DC47F0 /* Images.xcassets */; };
+		E49FE6801AA7259F00DC47F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E49FE67E1AA7259F00DC47F0 /* LaunchScreen.xib */; };
+		E49FE6931AA725D100DC47F0 /* SGiT_PoppingAnimationViewHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49FE6461AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper.framework */; };
+		E49FE6941AA725D100DC47F0 /* SGiT_PoppingAnimationViewHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E49FE6461AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E49FE6531AA724DD00DC47F0 /* PBXContainerItemProxy */ = {
+		E49FE6951AA725D100DC47F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E49FE63D1AA724DD00DC47F0 /* Project object */;
 			proxyType = 1;
@@ -22,13 +28,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E49FE6971AA725D100DC47F0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E49FE6941AA725D100DC47F0 /* SGiT_PoppingAnimationViewHelper.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E49FE6461AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SGiT_PoppingAnimationViewHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49FE64A1AA724DD00DC47F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E49FE64B1AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGiT_PoppingAnimationViewHelper.h; sourceTree = "<group>"; };
-		E49FE6511AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SGiT_PoppingAnimationViewHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E49FE6571AA724DD00DC47F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E49FE6581AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGiT_PoppingAnimationViewHelperTests.swift; sourceTree = "<group>"; };
+		E49FE66B1AA7252100DC47F0 /* PoppingAnimatedViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoppingAnimatedViewHelper.swift; sourceTree = "<group>"; };
+		E49FE6711AA7259F00DC47F0 /* PoppingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoppingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49FE6741AA7259F00DC47F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E49FE6751AA7259F00DC47F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E49FE6771AA7259F00DC47F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E49FE67A1AA7259F00DC47F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E49FE67C1AA7259F00DC47F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E49FE67F1AA7259F00DC47F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,11 +64,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E49FE64E1AA724DD00DC47F0 /* Frameworks */ = {
+		E49FE66E1AA7259F00DC47F0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E49FE6521AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper.framework in Frameworks */,
+				E49FE6931AA725D100DC47F0 /* SGiT_PoppingAnimationViewHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				E49FE6481AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper */,
-				E49FE6551AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelperTests */,
+				E49FE6721AA7259F00DC47F0 /* PoppingDemo */,
 				E49FE6471AA724DD00DC47F0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				E49FE6461AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper.framework */,
-				E49FE6511AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelperTests.xctest */,
+				E49FE6711AA7259F00DC47F0 /* PoppingDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				E49FE64B1AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper.h */,
+				E49FE66B1AA7252100DC47F0 /* PoppingAnimatedViewHelper.swift */,
 				E49FE6491AA724DD00DC47F0 /* Supporting Files */,
 			);
 			path = SGiT_PoppingAnimationViewHelper;
@@ -85,19 +111,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E49FE6551AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelperTests */ = {
+		E49FE6721AA7259F00DC47F0 /* PoppingDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E49FE6581AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelperTests.swift */,
-				E49FE6561AA724DD00DC47F0 /* Supporting Files */,
+				E49FE6751AA7259F00DC47F0 /* AppDelegate.swift */,
+				E49FE6771AA7259F00DC47F0 /* ViewController.swift */,
+				E49FE6791AA7259F00DC47F0 /* Main.storyboard */,
+				E49FE67C1AA7259F00DC47F0 /* Images.xcassets */,
+				E49FE67E1AA7259F00DC47F0 /* LaunchScreen.xib */,
+				E49FE6731AA7259F00DC47F0 /* Supporting Files */,
 			);
-			path = SGiT_PoppingAnimationViewHelperTests;
+			path = PoppingDemo;
 			sourceTree = "<group>";
 		};
-		E49FE6561AA724DD00DC47F0 /* Supporting Files */ = {
+		E49FE6731AA7259F00DC47F0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E49FE6571AA724DD00DC47F0 /* Info.plist */,
+				E49FE6741AA7259F00DC47F0 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -134,23 +164,24 @@
 			productReference = E49FE6461AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E49FE6501AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelperTests */ = {
+		E49FE6701AA7259F00DC47F0 /* PoppingDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E49FE65F1AA724DD00DC47F0 /* Build configuration list for PBXNativeTarget "SGiT_PoppingAnimationViewHelperTests" */;
+			buildConfigurationList = E49FE68D1AA7259F00DC47F0 /* Build configuration list for PBXNativeTarget "PoppingDemo" */;
 			buildPhases = (
-				E49FE64D1AA724DD00DC47F0 /* Sources */,
-				E49FE64E1AA724DD00DC47F0 /* Frameworks */,
-				E49FE64F1AA724DD00DC47F0 /* Resources */,
+				E49FE66D1AA7259F00DC47F0 /* Sources */,
+				E49FE66E1AA7259F00DC47F0 /* Frameworks */,
+				E49FE66F1AA7259F00DC47F0 /* Resources */,
+				E49FE6971AA725D100DC47F0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E49FE6541AA724DD00DC47F0 /* PBXTargetDependency */,
+				E49FE6961AA725D100DC47F0 /* PBXTargetDependency */,
 			);
-			name = SGiT_PoppingAnimationViewHelperTests;
-			productName = SGiT_PoppingAnimationViewHelperTests;
-			productReference = E49FE6511AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelperTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = PoppingDemo;
+			productName = PoppingDemo;
+			productReference = E49FE6711AA7259F00DC47F0 /* PoppingDemo.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -164,7 +195,7 @@
 					E49FE6451AA724DD00DC47F0 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
-					E49FE6501AA724DD00DC47F0 = {
+					E49FE6701AA7259F00DC47F0 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
@@ -175,6 +206,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = E49FE63C1AA724DD00DC47F0;
 			productRefGroup = E49FE6471AA724DD00DC47F0 /* Products */;
@@ -182,7 +214,7 @@
 			projectRoot = "";
 			targets = (
 				E49FE6451AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper */,
-				E49FE6501AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelperTests */,
+				E49FE6701AA7259F00DC47F0 /* PoppingDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -195,10 +227,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E49FE64F1AA724DD00DC47F0 /* Resources */ = {
+		E49FE66F1AA7259F00DC47F0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49FE67B1AA7259F00DC47F0 /* Main.storyboard in Resources */,
+				E49FE6801AA7259F00DC47F0 /* LaunchScreen.xib in Resources */,
+				E49FE67D1AA7259F00DC47F0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,26 +244,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49FE66C1AA7252100DC47F0 /* PoppingAnimatedViewHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E49FE64D1AA724DD00DC47F0 /* Sources */ = {
+		E49FE66D1AA7259F00DC47F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E49FE6591AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelperTests.swift in Sources */,
+				E49FE6781AA7259F00DC47F0 /* ViewController.swift in Sources */,
+				E49FE6761AA7259F00DC47F0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E49FE6541AA724DD00DC47F0 /* PBXTargetDependency */ = {
+		E49FE6961AA725D100DC47F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E49FE6451AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper */;
-			targetProxy = E49FE6531AA724DD00DC47F0 /* PBXContainerItemProxy */;
+			targetProxy = E49FE6951AA725D100DC47F0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E49FE6791AA7259F00DC47F0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E49FE67A1AA7259F00DC47F0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E49FE67E1AA7259F00DC47F0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E49FE67F1AA7259F00DC47F0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E49FE65A1AA724DD00DC47F0 /* Debug */ = {
@@ -266,7 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -306,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -346,32 +402,30 @@
 			};
 			name = Release;
 		};
-		E49FE6601AA724DD00DC47F0 /* Debug */ = {
+		E49FE68E1AA7259F00DC47F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = SGiT_PoppingAnimationViewHelperTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				INFOPLIST_FILE = PoppingDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		E49FE6611AA724DD00DC47F0 /* Release */ = {
+		E49FE68F1AA7259F00DC47F0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SGiT_PoppingAnimationViewHelperTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = PoppingDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -396,11 +450,11 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		E49FE65F1AA724DD00DC47F0 /* Build configuration list for PBXNativeTarget "SGiT_PoppingAnimationViewHelperTests" */ = {
+		E49FE68D1AA7259F00DC47F0 /* Build configuration list for PBXNativeTarget "PoppingDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E49FE6601AA724DD00DC47F0 /* Debug */,
-				E49FE6611AA724DD00DC47F0 /* Release */,
+				E49FE68E1AA7259F00DC47F0 /* Debug */,
+				E49FE68F1AA7259F00DC47F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

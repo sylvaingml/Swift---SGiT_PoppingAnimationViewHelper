@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PoppingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2n-oH-e7Z">
+                                <rect key="frame" x="46" y="110" width="508" height="400"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <state key="normal" title="Tap me!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="depressView:" destination="vyf-AY-W13" eventType="touchCancel" id="Azg-xc-uto"/>
+                                    <action selector="depressView:" destination="vyf-AY-W13" eventType="touchUpOutside" id="b6o-fl-2BZ"/>
+                                    <action selector="depressView:" destination="vyf-AY-W13" eventType="touchUpInside" id="ze0-KB-PD2"/>
+                                    <action selector="pressView:" destination="vyf-AY-W13" eventType="touchDown" id="aFu-VV-yZK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N2n-oH-e7Z" secondAttribute="bottom" constant="90" id="F1G-FV-I1V"/>
+                            <constraint firstItem="N2n-oH-e7Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="Lbd-p5-z82"/>
+                            <constraint firstItem="N2n-oH-e7Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="90" id="gSn-tK-eTW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N2n-oH-e7Z" secondAttribute="trailing" constant="30" id="gcU-vR-EgH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animatedBtn" destination="N2n-oH-e7Z" id="D1F-nM-1UY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="vyf-AY-W13" customClass="PoppingAnimatedViewHelper" customModule="SGiT_PoppingAnimationViewHelper"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
