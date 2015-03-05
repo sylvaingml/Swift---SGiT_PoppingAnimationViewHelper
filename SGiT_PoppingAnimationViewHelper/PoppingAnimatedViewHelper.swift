@@ -23,10 +23,10 @@ public class PoppingAnimatedViewHelper: NSObject
     // MARK: Animation properties
     
     /** Duration for the animation of the normal to pressed state. */
-    public var pressDuration = 0.15
+    public var pressDuration = 0.2
     
     /** Duration for the animation between pressed to normal state. */
-    public var depressDuration = 10.0
+    public var depressDuration = 0.4
     
     /** Reduction percent for display "pressed" state.
     
