@@ -44,6 +44,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E46FBABC1AF0188600F072A1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		E46FBABD1AF0188600F072A1 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E49FE6461AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SGiT_PoppingAnimationViewHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49FE64A1AA724DD00DC47F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E49FE64B1AA724DD00DC47F0 /* SGiT_PoppingAnimationViewHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGiT_PoppingAnimationViewHelper.h; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E49FE67A1AA7259F00DC47F0 /* Base */,
+				E46FBABC1AF0188600F072A1 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				E49FE67F1AA7259F00DC47F0 /* Base */,
+				E46FBABD1AF0188600F072A1 /* fr */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

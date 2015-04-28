@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Tap me!"; ObjectID = "N2n-oH-e7Z"; */
+"N2n-oH-e7Z.normalTitle" = "Touchez moi !";
+
+/* Class = "UISegmentedControl"; OKs-3S-OFd.segmentTitles[0] = "Normal"; ObjectID = "OKs-3S-OFd"; */
+"OKs-3S-OFd.segmentTitles[0]" = "Normal";
+
+/* Class = "UISegmentedControl"; OKs-3S-OFd.segmentTitles[1] = "Slow"; ObjectID = "OKs-3S-OFd"; */
+"OKs-3S-OFd.segmentTitles[1]" = "Lent";
+
+/* Class = "UISegmentedControl"; OKs-3S-OFd.segmentTitles[2] = "Ultra slow"; ObjectID = "OKs-3S-OFd"; */
+"OKs-3S-OFd.segmentTitles[2]" = "Très lent";
+
+/* Class = "UILabel"; text = "Testing PoppingAnimatedViewHelper utility"; ObjectID = "R5t-7Z-LYj"; */
+"R5t-7Z-LYj.text" = "Test de PoppingAnimatedViewHelper";
